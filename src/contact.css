@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+
+body {
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  background-color: #451027;
+  color: white;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #451027;
+  color: #fff;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo img {
+  max-height: 100px;
+}
+
+nav {
+  display: flex;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #fff;
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.toggle-label {
+  display: none;
+  cursor: pointer;
+}
+
+.toggle-label .line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px auto;
+}
+
+#toggle-nav {
+  display: none;
+}
+
+main {
+  width: 100%;
+  margin: 0;
+  background-color: #451027;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 40px auto;
+  color: #fff;
+}
+
+.description {
+  font-size: 20px;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto 50px auto;
+}
+
+.contact-info {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.social-media {
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+.social-media p {
+  font-size: 20px;
+}
+
+.social-media img {
+  width: 50px;
+  margin: 0 15px;
+  transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+  transform: scale(1.5);
+}
+
+.about-us-button {
+  border-radius: 50%;
+  padding: 5px 50px;
+  border: 3px solid white;
+  background-color: white;
+  display: block;
+  margin: 70px auto 0 auto;
+  text-align: center;
+  max-width: fit-content;
+}
+
+.nextpage-button {
+  font-size: 18px;
+  color: #451027;
+  text-decoration: none;
+  font-family: "Sanchez", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.nextpage-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .header-container {
+    padding: 15px;
+  }
+
+  .social-media img {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+
+  #toggle-nav:checked + .toggle-label + nav {
+    display: block;
+    width: 100%;
+    background-color: #451027;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .toggle-label {
+    display: block;
+  }
+
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .description {
+    width: 90%;
+  }
+
+  .about-us-button {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .contact-info {
+    font-size: 16px;
+  }
+
+  .social-media img {
+    width: 40px;
+    margin: 0 8px;
+  }
+
+  .about-us-button {
+    padding: 5px 30px;
+  }
+}

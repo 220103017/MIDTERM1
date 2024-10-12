@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+
+body {
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: white;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #451027;
+  color: #fff;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo img {
+  max-height: 80px;
+}
+
+nav {
+  display: flex;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #fff;
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.toggle-label {
+  display: none;
+  cursor: pointer;
+}
+
+.toggle-label .line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px auto;
+}
+
+#toggle-nav {
+  display: none;
+}
+
+main {
+  width: 100%;
+  margin: 0;
+  background-color: #451027;
+} 
+
+.intro {
+  position: relative;
+  text-align: center;
+}
+
+.curved-text-svg {
+  width: 100%;
+  max-width: 1300px;
+  position: absolute;
+  top: 6%;
+  left: 52%;
+  transform: translateX(-50%);
+}
+
+.curved-text-svg text {
+  font-size: 30px;
+  fill: #b91e61;
+  font-family: 'Sanchez', serif;
+}
+
+.background-image {
+  width: 100%;
+  height: 500px;
+}
+
+.intro-text {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin-left: 100px;
+  color: #ffffff;
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: italic;
+  text-align: left;
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px; 
+  text-align: center; 
+  gap: 100px;
+}
+
+.profile-image {
+  margin-left: 20px;
+}
+
+.profile-image img {
+  max-width: 300px;
+  border-radius: 50%;
+  border: 3px solid #451027;
+}
+
+.skills {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  color: #333;
+  text-align: left;
+  max-width: 1100px;
+  margin: 50px auto;
+  margin-bottom: 0px;
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.skills h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skills ul {
+  list-style-type: disc;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+
+.skills li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.family-button {
+  border-radius: 50%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 3px solid white;
+  background-color: white;
+  display: inline-block;
+  margin: 70px;
+  margin-left: 45%;
+}
+
+.nextpage-button {
+  font-size: 18px;
+  color: #451027;
+  text-decoration: none;
+  font-family: "Sanchez", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.nextpage-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #380c1d;
+  padding: 10px 0;
+}
+
+.footer-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-container p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.footer-links {
+  padding-top: 17px;
+}
+
+.footer-button {
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.footer-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .header-container {
+    padding: 15px;
+  }
+
+  .intro-content {
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+  }
+
+  .intro-text {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #toggle-nav:checked + .toggle-label + nav {
+    display: block;
+    width: 100%;
+    background-color: #451027;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .toggle-label {
+    display: block;
+  }
+
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .intro .background-image {
+    height: 400px;
+  }
+
+  .profile-image {
+    display: none;
+  }
+
+  .skills {
+    padding: 20px;
+  }
+
+  .family-button {
+    margin-left: 38%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container p {
+    padding-left: 0;
+  }
+
+  .footer-links {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-container {
+    padding: 10px;
+  }
+
+  .intro-content{
+    padding: 3px;
+  }
+
+  .intro-text {
+    font-size: 1em;
+  }
+
+  .skills h2 {
+    font-size: 1.5em;
+  }
+
+  .skills ul {
+    padding-left: 20px;
+  }
+
+  .skills li {
+    font-size: 1em;
+  }
+
+  .family-button {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 30%;
+  }
+
+  .footer-container {
+    padding: 0 10px;
+  }
+}

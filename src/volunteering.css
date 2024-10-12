@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+
+body {
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: white;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #451027;
+  color: #fff;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo img {
+  max-height: 100px;
+}
+
+nav {
+  display: flex;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #fff;
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.toggle-label {
+  display: none;
+  cursor: pointer;
+}
+
+.toggle-label .line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px auto;
+}
+
+#toggle-nav {
+  display: none;
+}
+
+main {
+  width: 100%;
+  margin: 0;
+  background-color: #C18EA5;
+}
+
+.volunteering-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #C18EA5;
+  text-align: center;
+}
+
+.volunteering-container h1 {
+  font-size: 40px;
+  color: #451027;
+  margin: 40px auto;
+}
+
+.intro-text {
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  width: 65%;
+  margin: 5% auto;
+  margin-bottom: 90px;
+}
+
+.volunteering-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 90px;
+  flex-wrap: wrap;
+}
+
+.volunteering-images img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.volunteering-images img:hover {
+  transform: scale(1.1);
+}
+
+.volunteering-activities {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.activity {
+  font-style: italic;
+  text-align: center;
+}
+
+.activity h3 {
+  font-size: 25px;
+  color: #FFFFFF;
+}
+
+.activity p {
+  font-size: 20px;
+  color: #FFFFFF;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contact-button {
+  border-radius: 50%;
+  padding: 5px 50px;
+  border: 3px solid white;
+  background-color: white;
+  display: block;
+  margin: 70px auto 0 auto;
+  text-align: center;
+  max-width: fit-content;
+}
+
+.nextpage-button {
+  font-size: 18px;
+  color: #451027;
+  text-decoration: none;
+  font-family: "Sanchez", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.nextpage-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #380c1d;
+  padding: 10px 0;
+}
+
+.footer-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-container p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  padding-top: 17px;
+}
+
+.footer-button {
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .header-container {
+    padding: 15px;
+  }
+
+  .volunteering-images {
+    gap: 20px;
+  }
+
+  .volunteering-activities {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+
+  #toggle-nav:checked + .toggle-label + nav {
+    display: block;
+    width: 100%;
+    background-color: #451027;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .toggle-label {
+    display: block;
+  }
+
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .volunteering-container {
+    padding: 10px;
+  }
+
+  .contact-button {
+    margin-top: 50px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .activity h3 {
+    font-size: 20px;
+  }
+
+  .activity p {
+    font-size: 16px;
+  }
+
+  .contact-button {
+    padding: 5px 30px;
+  }
+
+  .footer-container {
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+
+body {
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: white;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #451027;
+  color: #fff;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo img {
+  max-height: 80px;
+}
+
+nav {
+  display: flex;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #fff;
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.toggle-label {
+  display: none;
+  cursor: pointer;
+}
+
+.toggle-label .line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px auto;
+}
+
+#toggle-nav {
+  display: none;
+}
+
+main {
+  width: 100%;
+  margin: 0;
+  background-color: #E6C4D2;
+} 
+
+.hobby-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #E6C4D2;
+  text-align: center;
+}
+
+.hobby-container h1 {
+  font-size: 30px;
+  color: #451027;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.item-dombra-piano-jetigen,
+.item-camping,
+.item-traditional-literature,
+.item-painting {
+  display: flex;
+  gap: 50px;
+  padding-left: 5%;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.item-dombra-piano-jetigen img,
+.item-camping img,
+.item-traditional-literature img,
+.item-painting img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hobby-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hobby {
+  font-size: 25px;
+  color: #451027;
+}
+
+.description {
+  font-size: 20px;
+  color: #451027;
+}
+
+.volunteering-button {
+  border-radius: 50%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 3px solid white;
+  background-color: white;
+  display: inline-block;
+  margin: 70px;
+  margin-left: 41%;
+}
+
+.nextpage-button {
+  font-size: 18px;
+  color: #451027;
+  text-decoration: none;
+  font-family: "Sanchez", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.nextpage-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #380c1d;
+  padding: 10px 0;
+}
+
+.footer-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: "Sanchez", serif;
+  font-weight: 400;
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-container p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.footer-links {
+  padding-top: 17px;
+}
+
+.footer-button {
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.footer-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .header-container {
+    padding: 15px;
+  }
+
+  .item-dombra-piano-jetigen,
+  .item-camping,
+  .item-traditional-literature,
+  .item-painting {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hobby-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+
+  #toggle-nav:checked + .toggle-label + nav {
+    display: block;
+    width: 100%;
+    background-color: #451027;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .toggle-label {
+    display: block;
+  }
+
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .hobby-container {
+    padding: 10px;
+  }
+
+  .item-dombra-piano-jetigen,
+  .item-camping,
+  .item-traditional-literature,
+  .item-painting {
+    flex-direction: column;
+  }
+
+  .item-dombra-piano-jetigen img,
+  .item-camping img,
+  .item-traditional-literature img,
+  .item-painting img,
+  .hobby-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .item-dombra-piano-jetigen:nth-child(odd) img,
+  .item-camping:nth-child(odd) img,
+  .item-traditional-literature:nth-child(odd) img,
+  .item-painting:nth-child(odd) img {
+    order: 1;
+  }
+
+  .item-dombra-piano-jetigen:nth-child(odd) .hobby-text,
+  .item-camping:nth-child(odd) .hobby-text,
+  .item-traditional-literature:nth-child(odd) .hobby-text,
+  .item-painting:nth-child(odd) .hobby-text {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .volunteering-button {
+    margin-left: 35%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container p {
+    padding-left: 0;
+  }
+
+  .footer-links {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-container {
+    padding: 10px;
+  }
+
+  .hobby-container h1 {
+    font-size: 24px;
+  }
+
+  .hobby {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .volunteering-button {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 30%;
+  }
+
+  .footer-container {
+    padding: 0 10px;
+  }
+}
